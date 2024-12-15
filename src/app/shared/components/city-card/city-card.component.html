@@ -1,0 +1,21 @@
+<mat-card class="card-container">
+  <mat-card-header>
+    <mat-card-title>
+      @if(cityData.id){
+      <a [routerLink]="['/cityForecast', cityData.id]">{{ cityData.city }}</a>
+      } @else {
+      <a>{{ forecastData.date }}</a>
+      }
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-toggle-button
+      (temperatureChange)="recievedTemp($event)"
+    ></app-toggle-button>
+    @if (tempretureData==="celsius" ) {
+    <p>Temperature:{{ Data.temperatureCelsius }} °C</p>
+    }@else{
+    <p>Temperature: {{ Data.temperatureFahrenheit }} °F</p>
+    }
+  </mat-card-content>
+</mat-card>

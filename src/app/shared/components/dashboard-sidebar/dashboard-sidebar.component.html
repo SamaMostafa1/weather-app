@@ -1,0 +1,19 @@
+<div *ngIf="data">
+    <ul class="city-info">
+      <li class="city-name"> <p>{{ data.city }}</p></li>
+      <ul class="forecast-list">
+        @if(errorCheck){
+          <li>{{ errorMessage }}</li>
+        }@else{
+          <li>Date :{{ latestData.date }}</li>
+        <li> Celsius: {{ latestData.temperatureCelsius }} °C  </li>
+        <li>  Fahrenheit: {{ latestData.temperatureFahrenheit }} °F  </li>
+          <li> Humidity: {{ latestData.humidity }}</li>
+        }
+        <li><app-date-picker (formattedDateChange)="handleDateSelected($event)"></app-date-picker></li>
+      </ul>
+    </ul>
+  </div>
+  
+
+  

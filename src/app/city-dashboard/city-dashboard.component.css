@@ -1,0 +1,31 @@
+.weather-container {
+  height: 70vh;
+  width: 85vw;
+  display: flex;
+  background-color: white;
+  border-radius: 30px;
+  flex-direction: row;
+  margin: auto;
+}
+
+.left-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 16px;
+}
+
+.right-container {
+  flex: 8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f6f6f8;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  gap: 14px;
+  margin-right: 10px;
+}

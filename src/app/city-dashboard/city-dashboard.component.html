@@ -1,0 +1,19 @@
+<div class="weather-container">
+  <div class="left-container">
+    <!--  left container display selected date forecast -->
+    <app-dashboard-sidebar
+      *ngIf="city$ | async as city"
+      [data]="city"
+    ></app-dashboard-sidebar>
+  </div>
+  <div class="right-container">
+    <!--  right container display all forecasts -->
+    <p *ngIf="errorCheck">{{ errorMessage }}</p>
+    <ng-container *ngIf="city$ | async as city">
+      <app-city-card
+        *ngFor="let forecast of city.forecast"
+        [forecastData]="forecast"
+      ></app-city-card>
+    </ng-container>
+  </div>
+</div>

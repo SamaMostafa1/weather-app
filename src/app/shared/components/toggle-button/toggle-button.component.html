@@ -1,0 +1,8 @@
+<mat-button-toggle-group
+  name="temperature"
+  aria-label="Temperature unit"
+  [(ngModel)]="selectedTemperatureUnit" 
+  (change)="onTemperatureChange()">
+  <mat-button-toggle value="celsius">°C</mat-button-toggle>
+  <mat-button-toggle value="fahrenheit">°F</mat-button-toggle>
+</mat-button-toggle-group>
